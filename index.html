@@ -1,17 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Flight results – CS6750 Final Prototype</title>
-  <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mall Navigation Prototypes — CS 6750 Team Project</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="assets/css/wire.css">
+<style>
+  body{background:#efefef}
+  .wrap{max-width:980px;margin:0 auto;padding:36px 20px 60px}
+  h1{font-size:28px;margin:0 0 6px}
+  .lead{color:#555;margin:0 0 24px;max-width:720px;line-height:1.5}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+  .pcard{background:#fff;border:1.5px solid #c9c9c9;border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:8px;text-decoration:none;color:inherit}
+  .pcard:hover{border-color:var(--accent)}
+  .pcard .lbl{font-size:12px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.05em}
+  .pcard h3{margin:0;font-size:19px}
+  .pcard p{margin:0;color:#555;font-size:14px;line-height:1.45;flex:1}
+  .pcard .go{display:flex;gap:8px;margin-top:8px}
+  .note{margin-top:28px;background:#fff;border:1.5px dashed #aaa;border-radius:12px;padding:16px 18px;font-size:14px;line-height:1.55}
+  .note code{background:#f1f1f1;padding:1px 5px;border-radius:4px}
+</style>
 </head>
 <body>
-  <a class="skip" href="#main">Skip to results</a>
-  <div id="app"></div>
-  <div id="fac-root"></div>
-  <noscript><p style="padding:2rem">This prototype needs JavaScript turned on.</p></noscript>
-  <script src="app.js"></script>
+<div class="wrap">
+  <h1>Mall Navigation Prototypes — CS 6750 Team Project</h1>
+  <p class="lead">Three medium-fidelity, clickable wireframes of a phone interface for finding the best route through a mall, for single and multiple stops across floors. All three use the same fictional mall, Riverside Commons (3 floors, 17 places).</p>
+  <div class="cards">
+    <div class="pcard">
+      <span class="lbl">Prototype A · Idea #41</span>
+      <h3>Reserve-ahead stops</h3>
+      <p>Search for an item, see which stores have it in stock, reserve it, and pick it up with a code at each stop on your route.</p>
+      <div class="go"><a class="btn primary sm" href="a-reserve-ahead.html">Open</a><a class="btn ghost sm" href="a-reserve-ahead.html?facilitator=1">Open with facilitator panel</a></div>
+    </div>
+    <div class="pcard">
+      <span class="lbl">Prototype B · Idea #47</span>
+      <h3>Shopping progress tracker</h3>
+      <p>Build a stop list, then mark each stop Done or Skip as you go, with a progress bar, time left, and undo or add back for skipped stops.</p>
+      <div class="go"><a class="btn primary sm" href="b-progress-tracker.html">Open</a><a class="btn ghost sm" href="b-progress-tracker.html?facilitator=1">Open with facilitator panel</a></div>
+    </div>
+    <div class="pcard">
+      <span class="lbl">Prototype C · Idea #40</span>
+      <h3>Floor-aware stop ordering</h3>
+      <p>Stops are grouped by floor to cut down on floor changes, with a floor change card between groups and a comparison against the shortest walk.</p>
+      <div class="go"><a class="btn primary sm" href="c-floor-aware.html">Open</a><a class="btn ghost sm" href="c-floor-aware.html?facilitator=1">Open with facilitator panel</a></div>
+    </div>
+  </div>
+  <div class="note">
+    <b>Facilitator mode.</b> Add <code>?facilitator=1</code> to a prototype's address, use the "Open with facilitator panel" links, click the small <b>≡</b> button in the bottom-right corner, or press <b>Shift+F</b>. The panel records the participant ID, the task, a timer, every tap inside the phone, screens visited, back presses, facilitator marks, notes, and post-task ratings. Data stays in this browser's local storage and is never sent anywhere. Use the export buttons to download CSV or JSON.
+  </div>
+</div>
 </body>
 </html>
